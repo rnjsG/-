@@ -1013,21 +1013,28 @@ body {
 </div>
 
 <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot, query, where, orderBy, serverTimestamp, setDoc, getDoc, arrayUnion, Timestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-const firebaseConfig = {
-  apiKey: "AlzaSyDfFRk5c_i1K0W04T229N-wcsevrlypE6k",
-  authDomain: "kanban-c32bb.firebaseapp.com",
-  projectId: "kanban-c32bb",
-  storageBucket: "kanban-c32bb.firebasestorage.app",
-  messagingSenderId: "754380153148",
-  appId: "1:754380153148:web:eb4b461fab2d78eb077e39",
-  measurementId: "G-75CQRQV4FH"
-};
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAfV-HQb4Fr8WBOUNTAKWZLqQqih143J1U",
+    authDomain: "lgtalk-24bf4.firebaseapp.com",
+    projectId: "lgtalk-24bf4",
+    storageBucket: "lgtalk-24bf4.firebasestorage.app",
+    messagingSenderId: "21951619730",
+    appId: "1:21951619730:web:5e5b7e529b684b8df53c4b",
+    measurementId: "G-GRMNWTW4L8"
+  };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
 // 사용자 고유 식별값 (UUID 대체용 세션 키)
 let myUserId = localStorage.getItem('kanban_uid');
